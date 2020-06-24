@@ -9,14 +9,14 @@ $(() => {
     // Add conversions here
     const conversion = [
         // You can reference functions
-        { from: 'm', to: 'cm', convertFunc: fromMeterToCentimeter },
+        { from: 'km', to: 'm', convertFunc: fromKilometerToMeter },
 
         // You can specify inline conversions
-        { from: 'cm', to: 'm', convertFunc: value => value / 100 },
+        { from: 'km', to: 'm', convertFunc: value => value * 1000 },
     ];
     
-    function fromMeterToCentimeter(value) {
-        return value * 100;
+    function fromKilometerToMeter(value) {
+        return value * 1000;
     }
     // ============================================================================================
 
